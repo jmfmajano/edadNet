@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Resultados";
+    int vueltas = 1;
+}
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Tablas de multiplicar</div>
+    <div class="panel-body">
+        <div class="jumbotron">
+            @while (vueltas <= 10)
+            {
+            <h1>@ViewBag.tabla X @vueltas = @(ViewBag.tabla * vueltas)</h1>
+                vueltas = vueltas + 1;
+            }
+        </div>
+    </div>
+</div>
+

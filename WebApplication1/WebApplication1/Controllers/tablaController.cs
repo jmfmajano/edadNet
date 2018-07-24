@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
-    public class edadController : Controller
+    public class tablaController : Controller
     {
         // GET: edad
         public ActionResult Index()
@@ -15,9 +16,12 @@ namespace WebApplication1.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(int edad)
+        public ActionResult Index(int txttabla)
         {
-            return View();
+            //var tabla = new operaciones();
+            //var modelo = tabla.tablaMultiplicar(txttabla);
+            ViewBag.tabla = txttabla;
+            return View("Resultados");
         }
     }
 }
